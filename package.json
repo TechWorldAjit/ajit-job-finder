@@ -1,0 +1,28 @@
+{
+  "name": "ajit-job-finder",
+  "version": "1.0.0",
+  "description": "Ajit Job Finder — AI-Powered Smart Career Discovery Engine with High-Volume City-Specific Vacancy Aggregation (Greenhouse, Ashby, Lever, ArbeitNow)",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "node server/index.js",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "install:all": "npm install --prefix server && npm install --prefix client"
+  },
+  "keywords": [
+    "ai",
+    "job-finder",
+    "gemini",
+    "ats",
+    "career-discovery",
+    "greenhouse",
+    "ashby",
+    "lever",
+    "react",
+    "express"
+  ],
+  "author": "TechWorldAjit",
+  "license": "MIT"
+}
