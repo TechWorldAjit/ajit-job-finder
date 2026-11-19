@@ -37,7 +37,6 @@ export default function App() {
 
   // Candidate Profile State
   const [profile, setProfile] = useState(() => storage.getProfile());
-  const [sampleProfiles, setSampleProfiles] = useState([]);
   const [isParsingProfile, setIsParsingProfile] = useState(false);
   const [profileError, setProfileError] = useState(null);
 
@@ -62,15 +61,6 @@ export default function App() {
   const [savedJobs, setSavedJobs] = useState(() => storage.getSavedJobs());
   const [appliedJobs, setAppliedJobs] = useState(() => storage.getAppliedJobs());
 
-  // Load sample profiles from backend
-  useEffect(() => {
-    fetch('/api/sample-profiles')
-      .then(res => res.json())
-      .then(data => {
-        if (data.profiles) setSampleProfiles(data.profiles);
-      })
-      .catch(err => console.warn('Could not load sample profiles:', err));
-  }, []);
 
   // Save profile to storage whenever updated
   const handleProfileLoaded = (newProfile) => {
@@ -315,7 +305,6 @@ export default function App() {
         {!profile ? (
           <ProfileUpload
             onProfileLoaded={handleProfileLoaded}
-            sampleProfiles={sampleProfiles}
             isLoading={isParsingProfile}
             error={profileError}
           />

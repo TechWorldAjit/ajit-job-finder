@@ -33,5 +33,8 @@
     "express"
   ],
   "author": "TechWorldAjit",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "puppeteer-core": "^25.18.1"
+  }
 }
